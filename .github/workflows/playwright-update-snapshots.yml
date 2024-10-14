@@ -20,8 +20,8 @@ jobs:
       - name: Comment action started
         uses: thollander/actions-comment-pull-request@v3
         with:
-        message: |
-          ### Updating snapshots. Click [here](https://github.com/${{ github.repository }}/actions/runs${{ github.run_id }}) to see the status.
+          message: |
+            ### Updating snapshots. Click [here](https://github.com/${{ github.repository }}/actions/runs${{ github.run_id }}) to see the status.
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
