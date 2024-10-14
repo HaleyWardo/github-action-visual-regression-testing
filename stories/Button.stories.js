@@ -12,7 +12,7 @@ export default {
   },
   render: (args) =>
     html` <glide-core-button
-      size=${args.size}
+      size="secondary"
       variant=${args.variant}
       ?disabled=${args.disabled || nothing}
     >
