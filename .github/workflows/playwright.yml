@@ -21,7 +21,7 @@ jobs:
         run: |
           pnpm exec playwright test | tee output.log
 
-          if grep -q "Error: A snapshot doesn't exist at" output.log; then
+          if grep -q -e "Error: A snapshot doesn't exist at" -e "Error: Screenshot comparison failed" output.log; then
             echo "Playwright tests failed sue to a snapshot issue."
             echo "SNAPSHOT_DIFFERENCES=true" >> $GITHUB_ENV
             exit 1
