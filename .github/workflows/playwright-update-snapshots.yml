@@ -30,7 +30,7 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
       - name: Run Playwright update snapshots
-        run: pnpm exec playwright test:update
+        run: pnpm exec playwright test --update-snapshots"
       - name: Commit and push updated snapshots
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
